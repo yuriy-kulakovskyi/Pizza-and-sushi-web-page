@@ -106,6 +106,9 @@ $(document).ready(() => {
         $("#cart-img").attr('src', 'public/img/cart-prototype.png');
       });
 
+      $(".label").css('background-color', "#fff");
+      $(".ball").css("background-color", '#111');
+
       theme = 'dark';
     } else if (theme === 'dark') {
       $('section').css('background-color', '#fff');
@@ -126,6 +129,9 @@ $(document).ready(() => {
       $("#cart").mouseleave(() => {
         $("#cart-img").attr('src', 'public/img/cart.png');
       });
+
+      $(".label").css('background-color', "#111");
+      $(".ball").css("background-color", '#fff');
 
       theme = 'light';
     }

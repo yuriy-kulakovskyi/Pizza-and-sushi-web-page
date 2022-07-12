@@ -60,6 +60,8 @@
   -webkit-transform: scale(1.5);
           transform: scale(1.5);
   cursor: pointer;
+  -webkit-box-shadow: 0 0 10px #CB193F;
+          box-shadow: 0 0 10px #CB193F;
 }
 .wrapper .wrapper__header .light-and-dark-theme .ball {
   width: 20px;
