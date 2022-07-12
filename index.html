@@ -12,21 +12,44 @@
   <!-- jQuery -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
+  <!-- font awesome -->
+  <script src="https://kit.fontawesome.com/657ceb94fb.js" crossorigin="anonymous"></script>
+
   <!-- Custom stylesheets -->
   <link rel="stylesheet" href="public/css/style.css">
 </head>
 <body>
   <!-- Wrapper for site starts -->
   <div class="wrapper" id="wrapper">
+
+    <!-- header block -->
+    <header class="wrapper__header">
+      <div class="light-and-dark-theme">
+        <input type="checkbox" class="checkbox" id="checkbox">
+        <label for="checkbox" class="label">
+        <i class="fas fa-moon"></i>
+        <i class='fas fa-sun'></i>
+        <div class='ball'></div>
+        </label>
+      </div>
+      <div class="header__burger-btn" id="burger-btn">
+        <img src="public/img/Burger-button.png" alt="Burger button">
+      </div>
+    </header>
+
+    <!-- Burger menu -->
+    <div class="wrapper__burger-menu" id="menu">
+      <div class="linkVal" id="linkVal"></div>
+      <ul class="items-list">
+        <li class="list-item"><a href="#" class="top-today item__link" id="top-today">top</a></li>
+        <li class="list-item"><a href="#" class="products item__link" id="products">products</a></li>
+        <li class="list-item"><a href="#" class="faq item__link" id="faq">faq</a></li>
+        <li class="list-item"><a href="#" class="about item__link" id="about">about</a></li>
+      </ul>
+    </div>
+
     <!-- Home section starts -->
     <section class="home" id="home">
-      <!-- header block -->
-      <header class="home__header">
-        <div class="header__burger-btn">
-          <img src="public/img/Burger-button.png" alt="Burger button">
-        </div>
-      </header>
-
       <!-- main block -->
       <main class="home__main">
         <!-- Logotype -->
@@ -44,7 +67,7 @@
       <footer class="home__footer">
         <div class="footer__info-wrap">
           <div class="arrow-down">
-            <img src="public/img/arrow.png" alt="arrow-down">
+            <img src="public/img/arrow.png" alt="arrow-down" id="arrow-down">
           </div>
           <div class="shopping-cart" id="cart">
             <div class="circle">1</div>
