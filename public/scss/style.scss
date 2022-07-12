@@ -294,6 +294,8 @@ $red: #CB193F;
       }
 
       .home__footer {
+        height: 70px;
+
         .footer__info-wrap {
           .arrow-down {
             width: 40px!important; height: 40px!important;
@@ -351,6 +353,15 @@ $red: #CB193F;
     @media (max-height: 775px) {
       .home__main {
         .main__logo {
+          margin-top: 80px!important;
+          height: 300px!important;
+        }
+      }
+    }
+
+    @media (max-height: 511px) {
+      .home__main {
+        .main__logo {
           display: none;
         }
       }
@@ -358,6 +369,10 @@ $red: #CB193F;
 
     @media (max-height: 462px) {
       .home__main {
+        .main__logo {
+          width: 150px; height: 100px;
+        }
+
         .main__info {
           margin-top: 100px;
           font-size: 20px;

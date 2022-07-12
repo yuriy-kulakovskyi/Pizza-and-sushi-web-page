@@ -344,6 +344,9 @@
   .wrapper .home .home__main .main__subtitle {
     font-size: 20px !important;
   }
+  .wrapper .home .home__footer {
+    height: 70px;
+  }
   .wrapper .home .home__footer .footer__info-wrap .arrow-down {
     width: 40px !important;
     height: 40px !important;
@@ -388,10 +391,20 @@
 }
 @media (max-height: 775px) {
   .wrapper .home .home__main .main__logo {
+    margin-top: 80px !important;
+    height: 300px !important;
+  }
+}
+@media (max-height: 511px) {
+  .wrapper .home .home__main .main__logo {
     display: none;
   }
 }
 @media (max-height: 462px) {
+  .wrapper .home .home__main .main__logo {
+    width: 150px;
+    height: 100px;
+  }
   .wrapper .home .home__main .main__info {
     margin-top: 100px;
     font-size: 20px;
