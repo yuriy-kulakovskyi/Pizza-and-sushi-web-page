@@ -18,7 +18,7 @@
   width: 100%;
 }
 .wrapper .home {
-  height: 921px;
+  height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -143,7 +143,7 @@
   width: 85px;
   height: 96px;
   margin-right: 43px;
-  margin: -23px 43px 0 0;
+  margin: -46px 43px 0 0;
   cursor: pointer;
 }
 .wrapper .home .home__footer .footer__info-wrap .shopping-cart .circle {

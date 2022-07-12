@@ -43,7 +43,7 @@ $red: #CB193F;
 
   // home styles 
   .home {
-    height: 921px;
+    height: 100vh;
     @include flexSpaceBetween-center();
     flex-direction: column;
 
@@ -123,7 +123,7 @@ $red: #CB193F;
         .shopping-cart {
           width: 85px; height: 96px;
           margin-right: 43px;
-          margin: -23px 43px 0 0;
+          margin: -46px 43px 0 0;
           cursor: pointer;
 
           .circle {
