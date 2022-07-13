@@ -89,7 +89,7 @@ $(document).ready(() => {
     if (theme === 'light') {
       $('section').css('background-color', '#111');
       $(".main__info").css("color", '#fff');
-      $(".main__subtitle").css("color", '#fff');
+      $(".main__subtitle").css("color", 'rgba(255, 255, 255, .5)');
       $("#arrow-down").attr('src', 'public/img/Arrow-light.png');
       $("#cart-img").attr('src', 'public/img/cart-prototype.png');
       $(".circle-wrap").css('border', '1px solid #fff');
@@ -113,7 +113,7 @@ $(document).ready(() => {
     } else if (theme === 'dark') {
       $('section').css('background-color', '#fff');
       $(".main__info").css("color", '#111');
-      $(".main__subtitle").css("color", '#111');
+      $(".main__subtitle").css("color", 'rgba(0, 0, 0, 0.5)');
       $("#arrow-down").attr('src', 'public/img/arrow.png');
       $("#cart-img").attr('src', 'public/img/cart.png');
       $(".circle-wrap").css('border', '1px solid #333');
