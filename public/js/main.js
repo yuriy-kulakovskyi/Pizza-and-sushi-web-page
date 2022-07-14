@@ -77,9 +77,11 @@ $(document).ready(() => {
     if (!opened) {
       opened = true;
       $("#menu").css('top', '0');
+      $("section").css('display', 'none');
     } else if (opened) {
       opened = false;
       $("#menu").css('top', '-100vh');
+      $("section").css('display', 'flex');
     }
   });
 
@@ -109,6 +111,29 @@ $(document).ready(() => {
       $(".label").css('background-color', "#fff");
       $(".ball").css("background-color", '#111');
 
+      $(".wrapper__header").css('background-color', '#111');
+
+      $(".top__header .header__title").css('color', '#fff');
+      $(".top__header .header__title").css('text-shadow', '0px 4px 3px rgba(255, 255, 255, 0.5');
+      $(".top__header .header__title .color").css('text-shadow', '0px 4px 3px rgba(255, 255, 255, 0.5');
+      $(".top__header .header__subtitle").css('color', '#fff');
+
+      $("#arrow-left").css('background-color', '#fff');
+      $("#arrow-right").css('background-color', '#fff');
+
+      $("#arrow-left").css('box-shadow', '0 0 4px #fff');
+      $("#arrow-right").css('box-shadow', '0 0 4px #fff');
+
+      $("#slider #slider__item").css('background-color', '#000');
+      $("#slider #slider__item").css('box-shadow', '0 0 4px #fff');
+      
+      $("#slider #slider__item .item__title").css('color', '#fff');
+      $("#slider #slider__item .item__description").css('color', '#fff');
+      $("#price").css('color', '#fff');
+      $("#price").css('text-shadow', '0 3px 4px rgba(255, 255, 255, 1)');
+      $(".box-number").css('box-shadow', '0 0 8px #fff');
+      $(".box-number .number").css('color', '#fff');
+
       theme = 'dark';
     } else if (theme === 'dark') {
       $('section').css('background-color', '#fff');
@@ -133,6 +158,29 @@ $(document).ready(() => {
       $(".label").css('background-color', "#111");
       $(".ball").css("background-color", '#fff');
 
+      $(".wrapper__header").css('background-color', '#fcfcfc');
+
+      $(".top__header .header__title").css('color', '#000');
+      $(".top__header .header__title").css('text-shadow', '0px 4px 4px rgba(51, 51, 51, 0.5');
+      $(".top__header .header__title .color").css('text-shadow', '0px 4px 4px rgba(51, 51, 51, 0.5');
+      $(".top__header .header__subtitle").css('color', '#333');
+
+      $("#arrow-left").css('background-color', 'transparent');
+      $("#arrow-right").css('background-color', 'transparent');
+
+      $("#arrow-left").css('box-shadow', '');
+      $("#arrow-right").css('box-shadow', '');
+
+      $("#slider #slider__item").css('background-color', '#f7f7f7');
+      $("#slider #slider__item").css('box-shadow', '0 0 3px rgba(0, 0, 0, 0.5)');
+      
+      $("#slider #slider__item .item__title").css('color', '#000');
+      $("#slider #slider__item .item__description").css('color', '#000');
+      $("#price").css('color', '#000');
+      $("#price").css('text-shadow', '');
+      $(".box-number").css('box-shadow', '0 0 3px #111');
+      $(".box-number .number").css('color', '#000');
+      
       theme = 'light';
     }
   });
