@@ -39,12 +39,12 @@
         <img src="public/img/Burger-button.png" alt="Burger button">
       </div>
     </header>
-
+    
     <!-- Burger menu -->
     <div class="wrapper__burger-menu" id="menu">
       <div class="linkVal" id="linkVal"></div>
       <ul class="items-list">
-        <li class="list-item"><a href="#" class="top-today item__link" id="top-today">top</a></li>
+        <li class="list-item"><a href="#top" class="top-today item__link" id="top-today">top</a></li>
         <li class="list-item"><a href="#" class="products item__link" id="products">products</a></li>
         <li class="list-item"><a href="#" class="faq item__link" id="faq">faq</a></li>
         <li class="list-item"><a href="#" class="about item__link" id="about">about</a></li>
@@ -69,8 +69,10 @@
       <!-- footer block -->
       <footer class="home__footer">
         <div class="footer__info-wrap">
-          <div class="arrow-down">
-            <img src="public/img/arrow.png" alt="arrow-down" id="arrow-down">
+          <div class="arrow-down" id="arrow-changeSection">
+            <a href="#top">
+              <img src="public/img/arrow.png" alt="arrow-down" id="arrow-down">
+            </a>
           </div>
           <div class="shopping-cart" id="cart">
             <div class="circle">1</div>
@@ -100,10 +102,12 @@
           </div>
 
           <div class="slider__item" id="slider__item">
-            <div class="item__image"></div>
+            <div class="item__image">
+              <img src="" alt="" id="sliderImg">
+            </div>
             <div class="item__info">
-              <h1 class="item__title">Pizza</h1>
-              <p class="item__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore </p>
+              <h1 class="item__title" id="sliderItemName"></h1>
+              <p class="item__description" id="sliderItemDescription"></p>
               <div class="item__footer">
                 <h3 class="footer__good-price" id="price"><span class="color">10</span>$</h3>
                 <div class="footer__number-of">

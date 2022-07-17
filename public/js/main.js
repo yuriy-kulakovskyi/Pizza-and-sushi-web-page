@@ -81,7 +81,7 @@ $(document).ready(() => {
     } else if (opened) {
       opened = false;
       $("#menu").css('top', '-100vh');
-      $("section").css('display', 'flex');
+      $("#home").css('display', 'flex');
     }
   });
 
@@ -183,5 +183,80 @@ $(document).ready(() => {
       
       theme = 'light';
     }
+  });
+
+  // change section button 
+  $("#arrow-changeSection").click(() => {
+    $("#top").css("display", "flex");
+    scrollTopAnimated();
+    setTimeout(() => {
+      $("#home").css("display", 'none');
+    }, 1000)
+  });
+
+  function scrollTopAnimated() {
+    $("html, body").animate({ scrollTop: "820" }, 1000);
+  }
+
+  // change number of goods to buy
+  let numberOfGoods = 1;
+  let startPrice = 10;
+
+  $("#minus").click(() => {
+    numberOfGoods--;
+    $("#number-to-change").text(numberOfGoods);
+    if (numberOfGoods <= 0) {
+      numberOfGoods = 0;
+      $("#number-to-change").text(numberOfGoods);
+    }
+    $("#price").html("<span class='color'>"+ numberOfGoods * startPrice  +"</span>" + '$');
+  });
+
+  $("#plus").click(() => {
+    numberOfGoods++;
+    $("#number-to-change").text(numberOfGoods);
+    if (numberOfGoods >= 10) {
+      numberOfGoods = 10;
+      $("#number-to-change").text(numberOfGoods);
+    }
+    $("#price").html("<span class='color'>"+ numberOfGoods * startPrice  +"</span>" + '$');
+  });
+
+  fetch('public/json/items.json')
+  .then(response => {
+    return response.json();
+  })
+  .then(jsondata => {
+    let selectedIndex = 0;
+    $("#sliderImg").attr('src', jsondata.sliderItems[selectedIndex].img);
+    $("#sliderImg").attr('alt', jsondata.sliderItems[selectedIndex].alt);
+    $("#sliderItemName").text(jsondata.sliderItems[selectedIndex].name);
+    $("#sliderItemDescription").text(jsondata.sliderItems[selectedIndex].description);
+
+    $("#arrow-right").click(() => {
+      selectedIndex++;
+      $("#sliderImg").attr('src', jsondata.sliderItems[selectedIndex].img);
+      $("#sliderImg").attr('alt', jsondata.sliderItems[selectedIndex].alt);
+      $("#sliderItemName").text(jsondata.sliderItems[selectedIndex].name);
+      $("#sliderItemDescription").text(jsondata.sliderItems[selectedIndex].description);
+
+      if (selectedIndex === jsondata.sliderItems.length - 1) {
+        selectedIndex = 0;
+        $("#sliderImg").attr('src', jsondata.sliderItems[selectedIndex].img);
+        $("#sliderImg").attr('alt', jsondata.sliderItems[selectedIndex].alt);
+        $("#sliderItemName").text(jsondata.sliderItems[selectedIndex].name);
+        $("#sliderItemDescription").text(jsondata.sliderItems[selectedIndex].description);
+      }
+    });
+
+    $("#arrow-left").click(() => {
+      if (selectedIndex !== 0) {
+        selectedIndex--;
+        $("#sliderImg").attr('src', jsondata.sliderItems[selectedIndex].img);
+        $("#sliderImg").attr('alt', jsondata.sliderItems[selectedIndex].alt);
+        $("#sliderItemName").text(jsondata.sliderItems[selectedIndex].name);
+        $("#sliderItemDescription").text(jsondata.sliderItems[selectedIndex].description);
+      } 
+    });
   });
 });
