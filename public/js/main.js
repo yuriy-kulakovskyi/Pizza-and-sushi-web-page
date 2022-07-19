@@ -10,14 +10,14 @@ $(document).ready(() => {
   });
 
   // link hovers
-  $("#top-today").mousemove(() => {
+  $("#top-today-link").mousemove(() => {
     $("#top-today").css('opacity', '1');
     $("#linkVal").text("TOP");
     $("#linkVal").css("opacity", "1");
     $("#linkVal").css("letter-spacing", "10px");
   });
 
-  $("#top-today").mouseleave(() => {
+  $("#top-today-link").mouseleave(() => {
     $("#top-today").css('opacity', '.7');
     $("#linkVal").text("");
     $("#linkVal").css("opacity", "0");
@@ -25,14 +25,14 @@ $(document).ready(() => {
   });
 
 
-  $("#products").mousemove(() => {
+  $("#products-link").mousemove(() => {
     $("#products").css('opacity', '1');
     $("#linkVal").text("PRODUCTS");
     $("#linkVal").css("opacity", "1");
     $("#linkVal").css("letter-spacing", "10px");
   });
 
-  $("#products").mouseleave(() => {
+  $("#products-link").mouseleave(() => {
     $("#products").css('opacity', '.7');
     $("#linkVal").text("");
     $("#linkVal").css("opacity", "0");
@@ -82,6 +82,7 @@ $(document).ready(() => {
       opened = false;
       $("#menu").css('top', '-100vh');
       $("#home").css('display', 'flex');
+      $("#cart").appendTo('.footer__info-wrap');
     }
   });
 
@@ -187,11 +188,12 @@ $(document).ready(() => {
 
   // change section button 
   $("#arrow-changeSection").click(() => {
-    $("#top").css("display", "flex");
+    $(".after-home").css("display", "flex");
     scrollTopAnimated();
     setTimeout(() => {
       $("#home").css("display", 'none');
-    }, 1000)
+      $("#cart").prependTo('#header');
+    }, 1000);
   });
 
   function scrollTopAnimated() {
@@ -222,6 +224,7 @@ $(document).ready(() => {
     $("#price").html("<span class='color'>"+ numberOfGoods * startPrice  +"</span>" + '$');
   });
 
+  // Fetch information about top products from json file
   fetch('public/json/items.json')
   .then(response => {
     return response.json();
@@ -258,5 +261,15 @@ $(document).ready(() => {
         $("#sliderItemDescription").text(jsondata.sliderItems[selectedIndex].description);
       } 
     });
+  });
+
+  $("#top-today-link").click(() => {
+    $(".after-home").css('display', 'flex');
+    $("#menu").css('top', '-100vh');
+  });
+
+  $("#products-link").click(() => {
+    $(".after-home").css('display', 'flex');
+    $("#menu").css('top', '-100vh');
   });
 });

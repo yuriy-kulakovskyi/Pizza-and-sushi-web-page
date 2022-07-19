@@ -26,7 +26,7 @@
   <div class="wrapper" id="wrapper">
 
     <!-- header block -->
-    <header class="wrapper__header">
+    <header class="wrapper__header" id="header">
       <div class="light-and-dark-theme">
         <input type="checkbox" class="checkbox" id="checkbox">
         <label for="checkbox" class="label">
@@ -44,8 +44,8 @@
     <div class="wrapper__burger-menu" id="menu">
       <div class="linkVal" id="linkVal"></div>
       <ul class="items-list">
-        <li class="list-item"><a href="#top" class="top-today item__link" id="top-today">top</a></li>
-        <li class="list-item"><a href="#" class="products item__link" id="products">products</a></li>
+        <li class="list-item"><a href="#top" class="top-today item__link" id="top-today-link">top</a></li>
+        <li class="list-item"><a href="#products" class="products item__link" id="products-link">products</a></li>
         <li class="list-item"><a href="#" class="faq item__link" id="faq">faq</a></li>
         <li class="list-item"><a href="#" class="about item__link" id="about">about</a></li>
       </ul>
@@ -75,7 +75,7 @@
             </a>
           </div>
           <div class="shopping-cart" id="cart">
-            <div class="circle">1</div>
+            <div class="circle">0</div>
             <div class="circle-wrap">
               <img src="public/img/cart.png" alt="Cart" id="cart-img">
             </div>
@@ -86,7 +86,7 @@
     <!-- Home section ends -->
 
     <!-- Top today section starts -->
-    <section class="top" id="top">
+    <section class="top after-home" id="top">
       <!-- header -->
       <div class="top__header">
         <h1 class="header__title">top <span class="color">today</span></h1>
@@ -109,7 +109,7 @@
               <h1 class="item__title" id="sliderItemName"></h1>
               <p class="item__description" id="sliderItemDescription"></p>
               <div class="item__footer">
-                <h3 class="footer__good-price" id="price"><span class="color">10</span>$</h3>
+                <h3 class="footer__good-price" id="price"><span class="color">10</span> $</h3>
                 <div class="footer__number-of">
                   <h4 class="number__instrument" id="minus"><span class="color">-</span></h4>
                   <div class="box-number">
@@ -130,12 +130,113 @@
         <!-- info card of slider -->
         <div class="main__slider-card"></div>
       </main>
-      <!-- footer -->
-      <footer class="top__footer">
-        <div class="footer__slider-buttons" id="slider-buttons"></div>
-      </footer>
     </section>
     <!-- Top today section ends -->
+
+    <!-- Products section starts -->
+    <section class="products after-home" id="products">
+      <!-- Header of "Products" section -->
+      <div class="products__header">
+        <h1 class="header__logo">Lorem</h1>
+        <nav class="header__nav">
+          <div class="nav__item">
+            <div class="item__image pizza-item">
+              <img src="public/img/pizza-item.png" alt="Pizza">
+            </div>
+            <p class="item__title">Піца</p>
+          </div>
+          <div class="nav__item">
+            <div class="item__image sushi-item">
+              <img src="public/img/sushi.png" alt="Sushi">
+            </div>
+            <p class="item__title">Суші</p>
+          </div>
+          <div class="nav__item">
+            <div class="item__image burger-item">
+              <img src="public/img/burger.png" alt="Burger">
+            </div>
+            <p class="item__title">Бургери</p>
+          </div>
+          <div class="nav__item">
+            <div class="item__image drink-item">
+              <img src="public/img/drink.png" alt="Drink">
+            </div>
+            <p class="item__title">Напої</p>
+          </div>
+        </nav>
+        <div class="header__city">
+          <div class="city__location-img">
+            <img src="public/img/location.png" alt="Location">
+          </div>
+          <p class="city__name">Львів</p>
+        </div>
+      </div>
+
+      <!-- Main block of "Products" section -->
+      <main class="products__main">
+        <div class="main__list">
+          <div class="list__item">
+            <div class="item__header">
+              <div class="header__product-characteristics">
+                <h4 class="characteristics__weight"><span class="yellow">320</span> гр</h4>
+                <h4 class="characteristics__size">30 гр</h4>
+              </div>
+            </div>
+            <div class="item__image">
+              <img src="public/img/pizza-item.png" alt="Pizza">
+            </div>
+            <div class="item__description">
+              <h1 class="description__title">Піца</h1>
+              <p class="description__composition">соус бешамель, сир моцарела, сир пармезан, <br> сир камамбер, соус песто.</p>
+            </div>
+            <div class="item__footer">
+              <div class="panel">
+                <h3 class="footer__good-price"><span class="yellow">10</span> $</h3>
+                <div class="footer__number-of">
+                  <h4 class="number__instrument"><span class="color">-</span></h4>
+                  <div class="box-number">
+                    <h4 class="number">1</h4>
+                  </div>
+                  <h4 class="number__instrument"><span class="color">+</span></h4>
+                </div>
+                <button class="buy">Замовити</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="list__item">
+            <div class="item__header">
+              <div class="header__product-characteristics">
+                <h4 class="characteristics__weight"><span class="yellow">320</span> гр</h4>
+                <h4 class="characteristics__size">30 гр</h4>
+              </div>
+            </div>
+            <div class="item__image">
+              <img src="public/img/pizza-item.png" alt="Pizza">
+            </div>
+            <div class="item__description">
+              <h1 class="description__title">Піца</h1>
+              <p class="description__composition">соус бешамель, сир моцарела, сир пармезан, <br> сир камамбер, соус песто.</p>
+            </div>
+            <div class="item__footer">
+              <div class="panel">
+                <h3 class="footer__good-price"><span class="yellow">10</span> $</h3>
+                <div class="footer__number-of">
+                  <h4 class="number__instrument"><span class="color">-</span></h4>
+                  <div class="box-number">
+                    <h4 class="number">1</h4>
+                  </div>
+                  <h4 class="number__instrument"><span class="color">+</span></h4>
+                </div>
+                <button class="buy">Замовити</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </section>
+    <!-- Products section ends -->
+
   </div>
   <!-- Wrapper for site ends -->
 
