@@ -2,11 +2,15 @@ $(document).ready(() => {
   // mousemove event for cart button
   $("#cart").mousemove(() => {
     $("#cart-img").attr('src', 'public/img/cart-prototype.png');
+    $("#cart .circle-wrap").css('background-color', '#CB193F');
+    $("#cart .circle-wrap").css('border', 'none');
   });
 
   // mouseleave event for cart button
   $("#cart").mouseleave(() => {
     $("#cart-img").attr('src', 'public/img/cart.png');
+    $("#cart .circle-wrap").css('background-color', 'transparent');
+    $("#cart .circle-wrap").css('border', '1px solid #111');
   });
 
   // link hovers
@@ -81,7 +85,7 @@ $(document).ready(() => {
     } else if (opened) {
       opened = false;
       $("#menu").css('top', '-100vh');
-      $("#home").css('display', 'flex');
+      $("section").css('display', 'flex');
       $("#cart").appendTo('.footer__info-wrap');
     }
   });
@@ -102,11 +106,15 @@ $(document).ready(() => {
       // mousemove event for cart button
       $("#cart").mousemove(() => {
         $("#cart-img").attr('src', 'public/img/cart-prototype.png');
+        $("#cart .circle-wrap").css('background-color', '#CB193F');
+        $("#cart .circle-wrap").css('border', 'none');
       });
 
       // mouseleave event for cart button
       $("#cart").mouseleave(() => {
         $("#cart-img").attr('src', 'public/img/cart-prototype.png');
+        $("#cart .circle-wrap").css('background-color', 'transparent');
+        $("#cart .circle-wrap").css('border', '1px solid #fff');
       });
 
       $(".label").css('background-color', "#fff");
@@ -134,6 +142,51 @@ $(document).ready(() => {
       $("#price").css('text-shadow', '0 3px 4px rgba(255, 255, 255, 1)');
       $(".box-number").css('box-shadow', '0 0 8px #fff');
       $(".box-number .number").css('color', '#fff');
+      
+      $(".products__header").css('background-color', '#000');
+
+      $(".products__header .header__nav .nav__item").css('border', '1px solid #fff');
+
+      $(".products__header .header__nav .pizza").mousemove(() => {
+        $(".products__header .header__nav .pizza").css('border', '1px solid #CB193F');
+      });
+
+      $(".products__header .header__nav .pizza").mouseleave(() => {
+        $(".products__header .header__nav .pizza").css('border', '1px solid #fff');
+      });
+
+      $(".products__header .header__nav .sushi").mousemove(() => {
+        $(".products__header .header__nav .sushi").css('border', '1px solid #CB193F');
+      });
+
+      $(".products__header .header__nav .sushi").mouseleave(() => {
+        $(".products__header .header__nav .sushi").css('border', '1px solid #fff');
+      });
+
+      $(".products__header .header__nav .burger").mousemove(() => {
+        $(".products__header .header__nav .burger").css('border', '1px solid #CB193F');
+      });
+
+      $(".products__header .header__nav .burger").mouseleave(() => {
+        $(".products__header .header__nav .burger").css('border', '1px solid #fff');
+      });
+
+      $(".products__header .header__nav .drink").mousemove(() => {
+        $(".products__header .header__nav .drink").css('border', '1px solid #CB193F');
+      });
+
+      $(".products__header .header__nav .drink").mouseleave(() => {
+        $(".products__header .header__nav .drink").css('border', '1px solid #fff');
+      });
+
+      $(".products__header .header__nav .nav__item .item__title").css('color', '#fff');
+      $(".products__header .header__city .city__name").css("color", '#fff');
+      $(".characteristics__size").css("color", '#fff');
+      $(".characteristics__weight").css("color", '#fff');
+      $(".description__title").css("color", '#fff');
+      $(".description__composition").css("color", 'rgba(255, 255, 255, .6)');
+      $(".footer__good-price").css("color", '#fff');
+      $(".list__item").css("box-shadow", '0 0 4px rgba(255, 255, 255, .5)');
 
       theme = 'dark';
     } else if (theme === 'dark') {
@@ -181,20 +234,71 @@ $(document).ready(() => {
       $("#price").css('text-shadow', '');
       $(".box-number").css('box-shadow', '0 0 3px #111');
       $(".box-number .number").css('color', '#000');
-      
+
+      $(".products__header").css('background-color', '#fff');
+
+      $(".products__header .header__nav .nav__item").css('border', '1px solid #000');
+
+      $(".products__header .header__nav .pizza").mousemove(() => {
+        $(".products__header .header__nav .pizza").css('border', '1px solid #CB193F');
+      });
+
+      $(".products__header .header__nav .pizza").mouseleave(() => {
+        $(".products__header .header__nav .pizza").css('border', '1px solid #000');
+      });
+
+      $(".products__header .header__nav .sushi").mousemove(() => {
+        $(".products__header .header__nav .sushi").css('border', '1px solid #CB193F');
+      });
+
+      $(".products__header .header__nav .sushi").mouseleave(() => {
+        $(".products__header .header__nav .sushi").css('border', '1px solid #000');
+      });
+
+      $(".products__header .header__nav .burger").mousemove(() => {
+        $(".products__header .header__nav .burger").css('border', '1px solid #CB193F');
+      });
+
+      $(".products__header .header__nav .burger").mouseleave(() => {
+        $(".products__header .header__nav .burger").css('border', '1px solid #000');
+      });
+
+      $(".products__header .header__nav .drink").mousemove(() => {
+        $(".products__header .header__nav .drink").css('border', '1px solid #CB193F');
+      });
+
+      $(".products__header .header__nav .drink").mouseleave(() => {
+        $(".products__header .header__nav .drink").css('border', '1px solid #000');
+      });
+
+      $(".products__header .header__nav .nav__item .item__title").css('color', 'rgba(0, 0, 0, .6');
+      $(".products__header .header__city .city__name").css("color", '#000');
+      $(".characteristics__size").css("color", '#000');
+      $(".characteristics__weight").css("color", '#000');
+      $(".description__title").css("color", '#000');
+      $(".description__composition").css("color", 'rgba(0, 0, 0, .6)');
+      $(".footer__good-price").css("color", '#000');
+      $(".list__item").css("box-shadow", '0 0 4px rgba(0, 0, 0, .5)');
+            
       theme = 'light';
     }
   });
 
   // change section button 
   $("#arrow-changeSection").click(() => {
-    $(".after-home").css("display", "flex");
     scrollTopAnimated();
-    setTimeout(() => {
-      $("#home").css("display", 'none');
-      $("#cart").prependTo('#header');
-    }, 1000);
+    $("#cart").prependTo('#header');
   });
+
+  function checkY() {
+    if (window.scrollY < 890) {
+      $("#cart").appendTo('.footer__info-wrap');
+    } else {
+      $("#cart").prependTo('#header');
+    }
+  }
+
+  setInterval(() => checkY(), 1);
 
   function scrollTopAnimated() {
     $("html, body").animate({ scrollTop: "820" }, 1000);

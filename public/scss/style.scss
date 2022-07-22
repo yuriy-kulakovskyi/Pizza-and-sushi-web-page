@@ -82,11 +82,6 @@ $red: #CB193F;
         @include flexCenter();
         transition: .6s ease-in-out;
 
-        &:hover {
-          background-color: $red;
-          border: none;
-        }
-
         img {
           width: 40px;
           height: 40px;
@@ -220,8 +215,7 @@ $red: #CB193F;
   }
 
   section {
-    width: 100%; height: 100vh;
-    display: none;
+    width: 100%; min-height: 100vh;
     transition: all 1s;
   }
 
@@ -235,7 +229,7 @@ $red: #CB193F;
 
   // home styles 
   .home {
-    @include flexSpaceBetween-center();
+    @include flexSpaceAround-center();
     flex-direction: column;
 
     // main block of home section
@@ -330,11 +324,6 @@ $red: #CB193F;
             border: 1px solid #111;
             @include flexCenter();
             transition: .6s ease-in-out;
-
-            &:hover {
-              background-color: $red;
-              border: none;
-            }
 
             img {
               width: 50px;
@@ -470,7 +459,6 @@ $red: #CB193F;
   // top today section
   .top {
     @include flexSpaceBetween-center();
-    display: none;
     flex-direction: column;
     padding-top: 50px;
 
@@ -514,11 +502,9 @@ $red: #CB193F;
       // Slider
       .main__slider {
         width: 100%;
-        height: 100%;
+        height: 45%;
         @include flexCenter();
         padding: 10px 20px;
-
-
 
         // Arrows of slider
         .slider__arrow {
@@ -730,7 +716,7 @@ $red: #CB193F;
     @media (max-height: 964px) {
       .top__main .main__slider {
         height: 650px;
-        margin-top: 100px!important;
+        margin-top: 150px!important;
       }
     }
 
@@ -825,11 +811,10 @@ $red: #CB193F;
 
   // products section
   .products {
-    display: none;
-    justify-content: space-between;
-    align-items: center;
+    @include flexSpaceBetween-center();
     flex-direction: column;
     padding-top: 70px;
+    z-index: 1;
 
     // header of "products" section
     .products__header {
@@ -838,11 +823,11 @@ $red: #CB193F;
       top: 90px; left: 0;
       @include flexSpaceBetween-center();
       padding: 0 39px;
-      background: #FFFFFF;
-      mix-blend-mode: darken;
+      background-color: #fff;
       border: 1px solid #000000;
       box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
       border-radius: 0px 0px 10px 10px;
+      z-index: 2;
       
       // Header elements
       .header__logo {
@@ -918,7 +903,7 @@ $red: #CB193F;
 
     // main block
     .products__main {
-      width: 100%; height: calc(100% - 100px);
+      width: 100%; height: 100vh;
       @include flexCenter();
 
       .main__list {
@@ -1032,6 +1017,12 @@ $red: #CB193F;
                   border-radius: 6px;
                   box-shadow: 0px 0px 3px #333333;
                   @include flexCenter();
+
+                  .number {
+                    font-family: comfortaa, sans-serif;
+                    font-size: 10px;
+                    font-weight: 400;
+                  }
                 }
               }
 
@@ -1051,6 +1042,47 @@ $red: #CB193F;
           }
         }
       }
+    }
+
+    // Media queries
+    @media (max-width: 667px) {
+      .products__main {
+        height: 100vh;
+
+        .main__list {
+          flex-direction: column;
+          height: 100%;
+          padding: 30px 0;
+
+          .list__item {
+            height: 360px;
+          }
+        }
+      }
+    }
+
+    @media (max-width: 508px) {
+      .products__header {
+        .header__nav {
+          display: none;
+        }
+      }
+    }
+
+    @media (max-height: 530px) {
+      padding-top: 100px;
+    }
+
+    @media (max-height: 494px) {
+      padding-top: 150px;
+    }
+
+    @media (max-height: 464px) {
+      padding-top: 200px;
+    }
+
+    @media (max-height: 395px) {
+      padding-top: 300px;
     }
   }
 }
